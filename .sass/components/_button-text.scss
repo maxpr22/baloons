@@ -1,0 +1,24 @@
+.btn-text{
+    &:link, &:visited{
+        text-decoration: none;
+        display: inline-block;
+        font-size: var(--font-size-paragraph);
+        letter-spacing: .2rem;
+        font-weight: 700;
+        color: var(--primary-text-color);
+        padding: 1rem;
+        border-bottom: 1px solid var(--brown-color-dark);
+        transition: .5s all;
+    }
+
+    &:hover{
+        background-color: var(--brown-color-light);
+        color: var(--brown-color-light);
+        box-shadow: var(--box-shadow);
+        transform: translateY(-.2rem);
+    }
+
+    &:active{
+        transform: translateY(.0);
+    }
+}

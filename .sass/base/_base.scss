@@ -15,7 +15,7 @@ body {
     font-family: 'roboto', sans-serif;
     letter-spacing: .2rem;
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: var(--font-size-paragraph);
     line-height: 1.71;
     padding: 5rem;
   }
@@ -49,6 +49,8 @@ img {
 //     padding: 94px 0px;
 //   }
 // }
+
+
 
 .no-scroll{
   overflow: hidden;

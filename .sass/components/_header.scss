@@ -23,73 +23,8 @@
     }
 }
 
-.title-first{
-color: var(--hero-title-text-color);
-
-    &__main{
-        display: block;
-        font-weight: 800;
-        font-size: 5rem;
-        line-height: 6rem;
-        letter-spacing: 1rem;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-        opacity: 0;
-        animation-name: leftToRight;
-        animation-duration: 1s;
-        animation-delay: 300ms;
-        animation-fill-mode: both;
-        animation-timing-function: ease-in;
-        backface-visibility: hidden;
-    }
-
-    &__secondary{
-        display: block;
-        margin-bottom: 6.5rem;
-        font-weight: 200;
-        font-size: 4rem;
-        line-height: 4.8rem;
-        letter-spacing: .5rem;
-        opacity: 0;
-        animation-name: rightToLeft;
-        animation-duration: 1s;
-        animation-delay: 300ms;
-        animation-fill-mode: both;
-        animation-timing-function: ease-in;
-        backface-visibility: hidden;
-        
-    }
-}
 
 
-@keyframes leftToRight {
-    0%{
-        opacity: 0;
-        transform: translateX(10rem);
-    }
-    80%{
-        transform: translateX(-1rem);
-    }
 
-    100%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes rightToLeft {
-    0%{
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-    80%{
-        transform: translateX(1rem);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
 
 
