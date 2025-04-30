@@ -581,6 +581,167 @@ p {
   margin-right: var(--gutter-horizontal);
 }
 
+.footer {
+  padding: 8rem;
+  background-color: var(--footer-bg-color);
+}
+.footer__logo {
+  width: 12rem;
+  display: inline-block;
+}
+.footer__list {
+  list-style: none;
+  text-align: center;
+}
+.footer__item {
+  display: inline-block;
+}
+.footer__item:not(:last-child) {
+  margin-right: 5rem;
+}
+.footer__link:link, .footer__link:visited {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: var(--font-size-paragraph);
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  display: inline-block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer__link:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: var(--brown-color-dark);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+}
+
+.navigation__toggle {
+  display: none;
+}
+.navigation__button {
+  background-color: var(--white);
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 10rem;
+  right: 10rem;
+  z-index: 200;
+  text-align: center;
+  cursor: pointer;
+}
+.navigation__background {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: radial-gradient(var(--brown-color-light), var(--brown-color-dark));
+  position: fixed;
+  right: 11rem;
+  top: 11rem;
+  z-index: 100;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 150;
+  opacity: 0;
+  width: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  list-style: none;
+}
+.navigation__item {
+  text-align: center;
+  width: 100%;
+}
+.navigation__item:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.navigation__link:link, .navigation__link:visited {
+  font-size: 4rem;
+  color: var(--white);
+  letter-spacing: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, transparent 0%, transparent 50%, var(--white) 50%);
+  background-size: 225%;
+  padding: 1rem 2rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  display: inline-block;
+}
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: var(--brown-color-dark);
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+.navigation__toggle:checked ~ .navigation__background {
+  -webkit-transform: scale(80);
+          transform: scale(80);
+}
+.navigation__toggle:checked ~ .navigation__nav {
+  width: 100%;
+  opacity: 1;
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 37px;
+}
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  width: 30px;
+  height: 2px;
+  background: var(--black);
+  display: inline-block;
+}
+.navigation__icon::before, .navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.navigation__icon::before {
+  top: -8px;
+}
+.navigation__icon::after {
+  top: 8px;
+}
+.navigation__button:hover .navigation__icon::before {
+  top: -10px;
+}
+.navigation__button:hover .navigation__icon::after {
+  top: 10px;
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon {
+  background: transparent;
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -619,6 +780,7 @@ p {
   -webkit-transition: all 300ms;
   transition: all 300ms;
   border: none;
+  cursor: pointer;
 }
 .btn:hover {
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
