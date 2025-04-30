@@ -1,0 +1,109 @@
+.card-tour {
+  height: 52rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  &__side {
+    transition: 0.5s all ease-out;
+    height: 52rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    overflow: hidden;
+    &_front {
+    
+    }
+    &_back {
+      background: linear-gradient(120deg, var(--brown-color-light), var(--brown-color-dark));
+      transform: rotateY(180deg);
+    }
+  }
+  &:hover &__side_front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side_back {
+    transform: rotateY(0deg);
+  }
+  &__img {
+    background-blend-mode: hard-light;
+    height: 21rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); 
+    &_1{
+        background: var(--brown-color-light) url(../images/card-1.jpg) center / cover no-repeat;
+    }  
+    &_2{
+        background: var(--brown-color-light) url(../images/card-2.jpg) center / cover no-repeat;
+    }
+    &_3{
+        background: var(--brown-color-light) url(../images/card-3.jpg) center / cover no-repeat;
+    }
+  }
+  &__title {
+    color: var(--white);
+    font-size: 2.8rem;
+    letter-spacing: .2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    position: absolute;
+    top: 15rem;
+    right: 0rem;
+  }
+  &__span{
+    background: linear-gradient(90deg, var(--brown-color-light), var(--brown-color-dark));
+    padding: 1rem 2rem .3rem 2rem;
+    &_1{
+
+    }
+    &_2{
+        position: absolute;
+        top: 3.4rem;
+        right: 0;
+        padding-bottom: .3rem;
+        padding-top: 0;
+    }
+  }
+  &__descr {
+    ul{
+        list-style: none;
+        margin: 0 auto;
+        width: 75%;
+        text-align: center;
+        li{
+            font-size: var(--font-size-paragraph);
+            letter-spacing: .2rem;
+            color: var(--primary-text-color);
+            border-bottom: 1px solid var(--primary-text-color);
+            display: inline-block;
+            &:not(:last-child){
+                margin-bottom: 2rem;
+            }
+        }
+    }
+  }
+  &__backSide-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__text{
+    margin-bottom: 8rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white);
+    &_1{
+      font-size: var(--font-size-paragraph);
+      font-weight: 300;
+    }
+    &_2{
+      font-size: 6rem;
+      font-weight: 500;
+    }
+  }
+}
