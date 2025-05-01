@@ -16,6 +16,14 @@
             animation-fill-mode: both;
             animation-timing-function: ease-in;
             backface-visibility: hidden;
+            @include respond(tab-land){
+                font-size: 4rem;
+            }
+            @include respond(tab-port){
+                font-size: 3.6rem;
+                letter-spacing: .5rem;
+                margin-bottom: 0;
+            }
         }
     
         &__secondary{
@@ -32,6 +40,14 @@
             animation-fill-mode: both;
             animation-timing-function: ease-in;
             backface-visibility: hidden;
+            @include respond(tab-land){
+                font-size: 3.5rem;
+                margin-bottom: 3.5rem;
+            }
+            @include respond(tab-port){
+                font-size: 3.2rem;
+                letter-spacing: .2rem;
+            }
             
         }
     }
@@ -48,6 +64,9 @@
     color: transparent;
     -webkit-background-clip: text;
     transition: all, .4s;
+    @include respond(tab-land){
+        font-size: 3rem;
+      }
     &_white{
         color: var(--white);
     }
@@ -58,6 +77,9 @@
     letter-spacing: .2rem;
     text-transform: uppercase;
     font-weight: 700;
+    @include respond(tab-land){
+        font-size: 1.8rem;
+      }
 }
 
 .paragraph{
@@ -65,4 +87,7 @@
     letter-spacing: .2rem;
     line-height: 140%;
     font-weight: 400;
+    @include respond(tab-land){
+        font-size: 1.5rem;
+      }
 }

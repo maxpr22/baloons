@@ -13,6 +13,7 @@
         z-index: 200;
         text-align: center ;
         cursor: pointer;
+        box-shadow: var(--box-shadow);
     }
     &__background{
         width: 6rem;
@@ -83,10 +84,10 @@
     }
     &__icon {
         position: relative;
-        margin-top: 37px;
+        margin-top: 3.7rem;
     
         &, &::before, &::after {
-            width: 30px;
+            width: 3rem;
             height: 2px;
             background: var(--black);
             display: inline-block;
@@ -100,18 +101,18 @@
         }
     
         &::before {
-            top: -8px;
+            top: -.8rem;
         }
     
         &::after {
-            top: 8px;
+            top: .8rem;
         }
     }
     &__button:hover &__icon::before{
-        top: -10px;
+        top: -1rem;
     }
     &__button:hover &__icon::after{
-        top: 10px;
+        top: 1rem;
     }
     &__toggle:checked + &__button &__icon{
          background: transparent;
